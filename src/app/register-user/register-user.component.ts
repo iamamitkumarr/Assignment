@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register-user.component.css']
 })
 export class RegisterUserComponent implements OnInit {
+  private users =[];
+  private nextNum: number;
 
   constructor() { }
 
   ngOnInit() {
+  }
+  onSubmit(user){
+    this.users.push(user);
+    localStorage.setItem('users',JSON.stringify(this.users))
   }
 
 }
