@@ -17,5 +17,8 @@ export class ListUserComponent implements OnInit {
     // console.log("type of", typeof(this.result));
     
   }
+  removeUser(){
+    this.result.pop();
+  }
 
 }
